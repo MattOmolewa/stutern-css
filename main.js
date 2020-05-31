@@ -13,7 +13,9 @@ button.addEventListener("click", function () {
   let newNote = prompt("Enter New Journal", "");
   let newDate = new Date(); //create date object
 
-  newHeader.innerHTML = `${newDate.getDay()}/${newDate.getMonth()}/${newDate.getYear()}: ${newTopic}`;
+  newHeader.innerHTML = `${newDate.getDate()}/${newDate.getMonth() + 1}/${
+    newDate.getYear() - 100
+  }: ${newTopic}`;
   newParagraph.innerHTML = newNote;
 
   //   main.appendChild(newArticle);
